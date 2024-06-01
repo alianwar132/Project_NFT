@@ -1,0 +1,29 @@
+class NFT{
+    constructor(name, eyeColor, shirtType, bling){
+        this.name = name;
+        this.eyeColor = eyeColor;
+        this.shirtType = shirtType;
+        this.bling = bling;
+    }
+}
+
+function mintNFT(name, eyeColor, shirtType, bling){
+    return new NFT(name, eyeColor, shirtType, bling);
+}
+
+let nftCollection = [];
+
+nftCollection.push(mintNFT('Anwar Ansari', 'Purple', 'Armor', 'Golden Necklace'));
+nftCollection.push(mintNFT('Supriya Singh', 'Black','Robe', 'Diamond Ring'));
+nftCollection.push(mintNFT('Sahil Wadhwa', 'Red','Tuxedo', 'Sapphir Crown'));
+nftCollection.push(mintNFT('Ambuj Tiwari', 'Green','Leather Jacket', 'Emerald Bracelet'));
+
+function printNFTDetails(nft){
+    console.log('Name: ${nft.name}');
+    console.log('Eye Color: ${nft.eyecolor}');
+    console.log('Shirt Type: ${nft.shirtType}');
+    console.log('Bling: ${nft.bling}');
+    console.log('---------------------');
+}
+
+nftCollection.forEach(printNFTDetails);
